@@ -1,0 +1,12 @@
+{
+  "name": "otgstream-front-end.node",
+  "version": "0.0.0",
+  "description": "OTGStreamFrontEnd.Node",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "net": "^1.0.2"
+  }
+}
