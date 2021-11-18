@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31912.275
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StreamToolFrontEnd", "StreamToolFrontEnd\StreamToolFrontEnd.csproj", "{0705E2D9-A618-4269-9383-36A9D397CE9A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTGStreamToolUserSide", "OTGStreamToolUserSide\OTGStreamToolUserSide.csproj", "{3A43E4E8-EEC8-4A9B-997C-091C909EE885}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OTGStreamToolUserSide", "OTGStreamToolUserSide\OTGStreamToolUserSide.csproj", "{3A43E4E8-EEC8-4A9B-997C-091C909EE885}"
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "OTGStreamFrontEnd.Node", "OTGStreamFrontEnd.Node\OTGStreamFrontEnd.Node.njsproj", "{BBB8795E-225A-48C1-B415-07DB53EACB89}"
 EndProject
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0705E2D9-A618-4269-9383-36A9D397CE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0705E2D9-A618-4269-9383-36A9D397CE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0705E2D9-A618-4269-9383-36A9D397CE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0705E2D9-A618-4269-9383-36A9D397CE9A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3A43E4E8-EEC8-4A9B-997C-091C909EE885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3A43E4E8-EEC8-4A9B-997C-091C909EE885}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A43E4E8-EEC8-4A9B-997C-091C909EE885}.Release|Any CPU.ActiveCfg = Release|Any CPU

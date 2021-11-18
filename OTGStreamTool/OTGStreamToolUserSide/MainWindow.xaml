@@ -7,20 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <TextBox Text="P1Tag" x:Name="tbx_P1Tag"/>
-        </Grid>
-        <Grid Grid.Row="1">
-            <Button Content="Update" Click="Button_Click" x:Name="btn_Update"/>
-        </Grid>
+        
     </Grid>
 </Window>
