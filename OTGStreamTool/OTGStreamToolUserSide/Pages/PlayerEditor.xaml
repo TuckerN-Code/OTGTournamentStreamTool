@@ -5,10 +5,77 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OTGStreamToolUserSide.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="1200"
       Title="PlayerEditor">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Player 1" Style="{StaticResource PlayerInfoText}" HorizontalAlignment="Center"/>
+            <CheckBox Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Content="Losers" x:Name="P1Losers"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Player" Style="{StaticResource PlayerInfoText}"/>
+            <TextBox x:Name="tbx_Player1Name" Grid.Row="1" Grid.Column="1" Style="{StaticResource PlayingInfoInput}"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Prefix" Style="{StaticResource PlayerInfoText}"/>
+            <TextBox x:Name="tbx_Player1Prefix" Grid.Row="2" Grid.Column="1" Style="{StaticResource PlayingInfoInput}"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Twitter" Style="{StaticResource PlayerInfoText}"/>
+            <TextBox x:Name="tbx_Player1Twitter" Grid.Row="3" Grid.Column="1" Style="{StaticResource PlayingInfoInput}"/>
+
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Player 2" Style="{StaticResource PlayerInfoText}" HorizontalAlignment="Center"/>
+            <CheckBox Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Content="Losers" x:Name="P2Losers"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Player" Style="{StaticResource PlayerInfoText}"/>
+            <TextBox x:Name="tbx_Player2Name" Grid.Row="1" Grid.Column="1" Style="{StaticResource PlayingInfoInput}"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Prefix" Style="{StaticResource PlayerInfoText}"/>
+            <TextBox x:Name="tbx_Player2Prefix" Grid.Row="2" Grid.Column="1" Style="{StaticResource PlayingInfoInput}"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Twitter" Style="{StaticResource PlayerInfoText}"/>
+            <TextBox x:Name="tbx_Player2Twitter" Grid.Row="3" Grid.Column="1" Style="{StaticResource PlayingInfoInput}"/>
+
+        </Grid>
     </Grid>
 </Page>
