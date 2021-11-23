@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:OTGStreamToolUserSide.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="1200"
+      Background="White"
       Title="PlayerEditor">
 
     <Grid>
@@ -20,12 +21,12 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Grid.Column="0">
+        <Grid Grid.Row="0" Grid.Column="0" Margin="0,0,10,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1.5*"/>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1.5*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -47,14 +48,17 @@
             <TextBlock Grid.Row="3" Grid.Column="0" Text="Twitter" Style="{StaticResource PlayerInfoText}"/>
             <TextBox x:Name="tbx_Player1Twitter" Grid.Row="3" Grid.Column="1" Style="{StaticResource PlayingInfoInput}"/>
 
+            <TextBlock Grid.Row="1" Grid.Column="2" Text="Pronouns" Style="{StaticResource PlayerInfoText}"/>
+            <TextBox x:Name="tbx_Player1Pronouns" Grid.Row="1" Grid.Column="3" Style="{StaticResource PlayingInfoInput}"/>
+
         </Grid>
 
-        <Grid Grid.Row="0" Grid.Column="2">
+        <Grid Grid.Row="0" Grid.Column="2" Margin="0,0,10,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1.5*"/>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1.5*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -76,6 +80,24 @@
             <TextBlock Grid.Row="3" Grid.Column="0" Text="Twitter" Style="{StaticResource PlayerInfoText}"/>
             <TextBox x:Name="tbx_Player2Twitter" Grid.Row="3" Grid.Column="1" Style="{StaticResource PlayingInfoInput}"/>
 
+            <TextBlock Grid.Row="1" Grid.Column="2" Text="Pronouns" Style="{StaticResource PlayerInfoText}"/>
+            <TextBox x:Name="tbx_Player2Pronouns" Grid.Row="1" Grid.Column="3" Style="{StaticResource PlayingInfoInput}"/>
+
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Content="Update" Style="{StaticResource UpdateButton}"/>
+            <Button Grid.Column="0" Grid.Row="0" Content="Swap" Style="{StaticResource ActionButtons}"/>
+            <Button Grid.Column="1" Grid.Row="0" Content="Clear" Style="{StaticResource ActionButtons}"/>
         </Grid>
     </Grid>
 </Page>
