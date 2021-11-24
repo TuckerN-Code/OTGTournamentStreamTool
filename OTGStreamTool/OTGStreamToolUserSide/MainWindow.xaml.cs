@@ -29,6 +29,7 @@ namespace OTGStreamToolUserSide
         public MainWindow()
         {
             InitializeComponent();
+           
             P1Tag = "Celsus";
         }
 

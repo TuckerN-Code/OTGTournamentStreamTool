@@ -18,10 +18,26 @@ namespace OTGStreamToolUserSide.Pages
     /// </summary>
     public partial class PlayerEditor : Page
     {
-        public string comm1 { get; set; }
+        
         public PlayerEditor()
         {
             InitializeComponent();
+            P1Losers.IsEnabled = false;
+            P2Losers.IsEnabled = false;
+        }
+
+        public void On_Update()
+        {
+            if(cbx_TournamentRound.SelectedValue.ToString() == "Grand Finals")
+            {
+                P1Losers.IsEnabled = true;
+                P2Losers.IsEnabled = true;
+            }
+            else
+            {
+                P1Losers.IsEnabled = false;
+                P2Losers.IsEnabled = false;
+            }
         }
     }
 }

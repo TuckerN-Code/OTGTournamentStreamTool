@@ -37,7 +37,7 @@
             </Grid.RowDefinitions>
 
             <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Player 1" Style="{StaticResource PlayerInfoText}" HorizontalAlignment="Center"/>
-            <CheckBox Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Content="Losers" x:Name="P1Losers"/>
+            <CheckBox Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Content="Losers" x:Name="P1Losers" Style="{StaticResource LosersToggle}"/>
 
             <TextBlock Grid.Row="1" Grid.Column="0" Text="Player" Style="{StaticResource PlayerInfoText}"/>
             <TextBox x:Name="tbx_Player1Name" Grid.Row="1" Grid.Column="1" Style="{StaticResource PlayingInfoInput}"/>
@@ -69,7 +69,7 @@
             </Grid.RowDefinitions>
 
             <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Player 2" Style="{StaticResource PlayerInfoText}" HorizontalAlignment="Center"/>
-            <CheckBox Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Content="Losers" x:Name="P2Losers"/>
+            <CheckBox Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Content="Losers" x:Name="P2Losers" Style="{StaticResource LosersToggle}"/>
 
             <TextBlock Grid.Row="1" Grid.Column="0" Text="Player" Style="{StaticResource PlayerInfoText}"/>
             <TextBox x:Name="tbx_Player2Name" Grid.Row="1" Grid.Column="1" Style="{StaticResource PlayingInfoInput}"/>
@@ -99,5 +99,36 @@
             <Button Grid.Column="0" Grid.Row="0" Content="Swap" Style="{StaticResource ActionButtons}"/>
             <Button Grid.Column="1" Grid.Row="0" Content="Clear" Style="{StaticResource ActionButtons}"/>
         </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Score" Style="{StaticResource ScoreText}" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="tbx_Player1Score" Grid.Row="1" Grid.Column="0" Style="{StaticResource ScoreInput}"/>
+            <TextBox x:Name="tbx_Player2Score" Grid.Row="1" Grid.Column="1" Style="{StaticResource ScoreInput}"/>
+            <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Text="Tournament Round" Style="{StaticResource TournamentRoundText}"/>
+            <ComboBox x:Name="cbx_TournamentRound" Grid.Row="2" Grid.ColumnSpan="2"  Style="{StaticResource TournamentRound}">
+                <ComboBoxItem Content="Friendlies"/>
+                <ComboBoxItem Content="Winners"/>
+                <ComboBoxItem Content="Losers"/>
+                <ComboBoxItem Content="Top 8 Qualifier"/>
+                <ComboBoxItem Content="Winners Quarterfinals"/>
+                <ComboBoxItem Content="Winners Semifinals"/>
+                <ComboBoxItem Content="Winners Finals"/>
+                <ComboBoxItem Content="Losers Quarterfinals"/>
+                <ComboBoxItem Content="Losers Semifinals"/>
+                <ComboBoxItem Content="Losers Finals"/>
+                <ComboBoxItem Content="Grand Finals"/>
+            </ComboBox>
+        </Grid>
+        
     </Grid>
 </Page>
