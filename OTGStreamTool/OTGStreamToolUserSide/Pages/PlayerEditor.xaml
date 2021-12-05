@@ -95,7 +95,7 @@
                 <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
 
-            <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Content="Update" Style="{StaticResource UpdateButton}"/>
+            <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Content="Update" Click="Button_Click" Style="{StaticResource UpdateButton}"/>
             <Button Grid.Column="0" Grid.Row="0" Content="Swap" Style="{StaticResource ActionButtons}"/>
             <Button Grid.Column="1" Grid.Row="0" Content="Clear" Style="{StaticResource ActionButtons}"/>
         </Grid>
@@ -115,19 +115,8 @@
             <TextBox x:Name="tbx_Player1Score" Grid.Row="1" Grid.Column="0" Style="{StaticResource ScoreInput}"/>
             <TextBox x:Name="tbx_Player2Score" Grid.Row="1" Grid.Column="1" Style="{StaticResource ScoreInput}"/>
             <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Text="Tournament Round" Style="{StaticResource TournamentRoundText}"/>
-            <ComboBox x:Name="cbx_TournamentRound" Grid.Row="2" Grid.ColumnSpan="2"  Style="{StaticResource TournamentRound}">
-                <ComboBoxItem Content="Friendlies"/>
-                <ComboBoxItem Content="Winners"/>
-                <ComboBoxItem Content="Losers"/>
-                <ComboBoxItem Content="Top 8 Qualifier"/>
-                <ComboBoxItem Content="Winners Quarterfinals"/>
-                <ComboBoxItem Content="Winners Semifinals"/>
-                <ComboBoxItem Content="Winners Finals"/>
-                <ComboBoxItem Content="Losers Quarterfinals"/>
-                <ComboBoxItem Content="Losers Semifinals"/>
-                <ComboBoxItem Content="Losers Finals"/>
-                <ComboBoxItem Content="Grand Finals"/>
-            </ComboBox>
+            <ComboBox x:Name="cbx_TournamentRound" Grid.Row="2" Grid.ColumnSpan="2"  Style="{StaticResource TournamentRound}"/>
+
         </Grid>
         
     </Grid>

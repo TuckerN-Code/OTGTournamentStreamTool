@@ -24,13 +24,11 @@ namespace OTGStreamToolUserSide
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string P1Tag;
 
         public MainWindow()
         {
             InitializeComponent();
-           
-            P1Tag = "Celsus";
+            ContentFrame.Content = new Pages.PlayerEditor();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -40,6 +38,10 @@ namespace OTGStreamToolUserSide
             
         }
         
+        private void GoToPlayerEditor(object sender, RoutedEventArgs e)
+        {
+            
+        }
 
 
 

@@ -20,7 +20,7 @@ namespace OTGStreamToolUserSide.Pages
     //USE DLLs TO TRANSFER DATA PLS PLS PLS
     public partial class CommentatorEditor : Page
     {
-        public string Comm1 { get; set; }
+        //public string Comm1 { get; set; }
         public CommentatorEditor()
         {
             InitializeComponent();

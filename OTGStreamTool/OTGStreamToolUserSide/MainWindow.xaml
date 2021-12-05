@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OTGStreamToolUserSide"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" 
+        MinHeight="300"
+        MinWidth="1200"
+                Height="300"
+        Width="1200">
     <Grid>
-        
+        <StackPanel Orientation="Vertical">
+            <Frame x:Name="ContentFrame"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -5,8 +5,8 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 
-namespace OTGStreamToolUserSide
-{
+namespace OTGStreamToolBackEnd
+{ 
     public class NetworkTesting
     {
     }
