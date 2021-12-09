@@ -33,8 +33,6 @@ namespace OTGStreamToolUserSide
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            AsynchronousClient client = new AsynchronousClient();
-            client.RunClient();
             
         }
         

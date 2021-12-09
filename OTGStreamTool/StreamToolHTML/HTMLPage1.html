@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <div id="demo">
+        <h2 id="hello">Let AJAX change this text</h2>
+        <button type="button" onclick="userAction()">Change Content</button>
+    </div>
+
+
+</body>
+</html>
+
+<script>
+    const userAction = async () => {
+        const response = await fetch('https://localhost:44311/api/player');
+        const myPlayer = await response.text();
+        ElementById("hello").innerHTML = myPlayer;
+    }
+
+    </script>

@@ -35,7 +35,7 @@ namespace OTGStreamToolBackEnd
 
         private static String response = String.Empty;
 
-        private static void StartClient() 
+        private static void StartClient(string input) 
             //Connect to remote device
         {
             try
@@ -63,12 +63,13 @@ namespace OTGStreamToolBackEnd
                 //Write the response to the console
                 Console.WriteLine("Response received : {0}", response); */
 
+
                 client.Bind(remoteEP);
                 client.Listen(0);
                 client = client.Accept();
 
-                var buffer = Encoding.UTF8.GetBytes("Help");
-                client.Send(buffer, 0, buffer.Length, 0);
+                var buffer = Encoding.UTF8.GetBytes(input);
+                Send(client, input);
 
                 //release the socket
                 client.Shutdown(SocketShutdown.Both);
@@ -187,9 +188,9 @@ namespace OTGStreamToolBackEnd
             }
         }
 
-        public void RunClient()
+        public void RunClient(string input)
         {
-            StartClient();
+            StartClient(input);
         }
     }
 }

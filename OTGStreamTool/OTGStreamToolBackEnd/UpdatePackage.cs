@@ -17,8 +17,13 @@ namespace OTGStreamToolBackEnd
         public string Player2Pronouns { get; set; }
 
         public string TournamentRound { get; set; }
-        public int Player1Score { get; set; }
-        public int Player2Score { get; set; }
+        public string Player1Score { get; set; }
+        public string Player2Score { get; set; }
+
+        public String sendP1Name()
+        {
+            return Player1Tag;
+        }
 
     }
 }

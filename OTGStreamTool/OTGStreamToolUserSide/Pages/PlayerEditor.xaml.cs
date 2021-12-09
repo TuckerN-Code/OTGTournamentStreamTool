@@ -20,6 +20,7 @@ namespace OTGStreamToolUserSide.Pages
     public partial class PlayerEditor : Page
     {
         UpdatePackage updatePackage = new UpdatePackage();
+        AsynchronousClient asynchronous = new AsynchronousClient();
         public PlayerEditor()
         {
             InitializeComponent();
@@ -43,12 +44,14 @@ namespace OTGStreamToolUserSide.Pages
             cbx_TournamentRound.Items.Add("Losers Quarterfinals");
             cbx_TournamentRound.Items.Add("Losers Finals");
             cbx_TournamentRound.Items.Add("Grand Finals");
+            cbx_TournamentRound.SelectedIndex = 1;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             CheckForGrands();
             UpdateLocalPackage();
+            asynchronous.RunClient(updatePackage.Player1Tag);
         }
 
 
@@ -62,13 +65,14 @@ namespace OTGStreamToolUserSide.Pages
             updatePackage.Player2Twitter = tbx_Player2Twitter.Text;
             updatePackage.Player1Pronouns = tbx_Player1Pronouns.Text;
             updatePackage.Player2Pronouns = tbx_Player2Pronouns.Text;
-            updatePackage.Player1Score = int.Parse(tbx_Player1Score.Text);
-            updatePackage.Player2Score = int.Parse(tbx_Player2Score.Text);
+            updatePackage.Player1Score = tbx_Player1Score.Text;
+            updatePackage.Player2Score = tbx_Player2Score.Text;
             updatePackage.TournamentRound = cbx_TournamentRound.Text;
 
         }
         private void CheckForGrands()
         {
+
             if (cbx_TournamentRound.SelectedValue.ToString() == "Grand Finals")
             {
                 P1Losers.IsEnabled = true;
@@ -79,6 +83,7 @@ namespace OTGStreamToolUserSide.Pages
                 P1Losers.IsEnabled = false;
                 P2Losers.IsEnabled = false;
             }
+            
         }
     }
 }
