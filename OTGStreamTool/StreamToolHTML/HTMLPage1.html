@@ -18,9 +18,9 @@
 
 <script>
     const userAction = async () => {
-        const response = await fetch('https://localhost:44311/api/player');
+        const response = await fetch('https://localhost:5001/api/player');
         const myPlayer = await response.text();
-        ElementById("hello").innerHTML = myPlayer;
+        document.getElementById("hello").innerHTML = myPlayer;
     }
 
     </script>

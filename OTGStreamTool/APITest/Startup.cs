@@ -11,10 +11,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace APITest
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,6 +27,14 @@ namespace APITest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("Origins",
+                    builder =>
+                    {
+                        builder.WithOrigins("http:localhost").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+                    });
+            });
             services.AddControllers();
         }
 
@@ -36,9 +46,12 @@ namespace APITest
                 app.UseDeveloperExceptionPage();
             }
 
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("Origins");
 
             app.UseAuthorization();
 
