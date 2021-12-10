@@ -8,7 +8,10 @@
 <body>
 
     <div id="demo">
-        <h2 id="hello">Let AJAX change this text</h2>
+        <h2 id="player1Name">Let AJAX change this text</h2>
+        <h2 id="player2Name"></h2>
+        <p id="player1Prefix"></p>
+        <p id="player2Prefix"></p>
         <button type="button" onclick="userAction()">Change Content</button>
     </div>
 
@@ -19,8 +22,11 @@
 <script>
     const userAction = async () => {
         const response = await fetch('https://localhost:5001/api/player');
-        const myPlayer = await response.text();
-        document.getElementById("hello").innerHTML = myPlayer;
+        const myPlayer = await response.json();
+        document.getElementById("player1Name").innerHTML = myPlayer[0];
+        document.getElementById("player2Name").innerHTML = myPlayer[1];
+        document.getElementById("player1Prefix").innerHTML = myPlayer[2];
+        document.getElementById("player2Prefix").innerHTML = myPlayer[3];
     }
 
     </script>

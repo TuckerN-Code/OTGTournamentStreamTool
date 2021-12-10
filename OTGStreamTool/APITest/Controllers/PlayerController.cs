@@ -8,11 +8,14 @@ using Microsoft.AspNetCore.Cors;
 
 namespace APITest.Controllers
 {
+
+    
     [Route("api/[controller]")]
     [ApiController]
     
     public class PlayerController : ControllerBase
     {
+        UpdatePackage update = new UpdatePackage();
         // GET: api/Player
         [EnableCors("Origins")]
         [HttpGet]
@@ -20,6 +23,7 @@ namespace APITest.Controllers
         {
             List<string> list = new List<string>();
             list.Add("Player1");
+            list.Add("Player2");
             return list;
         }
 
