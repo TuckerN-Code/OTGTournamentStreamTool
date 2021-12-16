@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -32,6 +34,7 @@ namespace OTGStreamToolUserSide
         {
             InitializeComponent();
             ContentFrame.Content = new Pages.PlayerEditor();
+            
             
         }
 

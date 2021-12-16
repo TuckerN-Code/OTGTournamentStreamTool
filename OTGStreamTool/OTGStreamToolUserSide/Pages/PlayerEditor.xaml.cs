@@ -51,7 +51,7 @@ namespace OTGStreamToolUserSide.Pages
         {
             CheckForGrands();
             UpdateLocalPackage();
-            asynchronous.RunClient(updatePackage.Player1Tag);
+            ApiAccess access = new ApiAccess(updatePackage);
         }
 
 
