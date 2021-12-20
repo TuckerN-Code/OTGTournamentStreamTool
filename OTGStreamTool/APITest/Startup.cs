@@ -18,8 +18,9 @@ namespace APITest
     {
         readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
-        {
+        { 
             Configuration = configuration;
+            
         }
 
         public IConfiguration Configuration { get; }

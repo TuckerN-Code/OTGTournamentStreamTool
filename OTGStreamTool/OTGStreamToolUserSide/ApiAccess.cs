@@ -17,14 +17,14 @@ namespace OTGStreamToolUserSide
         public ApiAccess(UpdatePackage inPack)
         {
             updatePackage = inPack;
-            Task.Run(() => GetTaskAsync("http://localhost:5001/api/player")).Wait();
+            //Task.Run(() => GetTaskAsync("https://localhost:5001/api/player")).Wait();
             Task.Run(() => UpdateInfoAsync()).Wait();
         }
 
         private async Task UpdateInfoAsync()
         {
             
-            HttpResponseMessage responce = await client.PutAsJsonAsync("http://localhost:5001/api/player", updatePackage);
+            HttpResponseMessage responce = await client.PutAsJsonAsync("https://localhost:5001/api/player", updatePackage);
 
             responce.EnsureSuccessStatusCode();
         }

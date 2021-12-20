@@ -15,15 +15,15 @@ namespace APITest.Controllers
     
     public class PlayerController : ControllerBase
     {
-        UpdatePackage update = new UpdatePackage();
+        
+        
         // GET: api/Player
         [EnableCors("Origins")]
         [HttpGet]
         public List<string> Get()
         {
             List<string> list = new List<string>();
-            list.Add("Player1");
-            list.Add("Player2");
+            list.Add(Global.update.sendP1Name());
             return list;
         }
 
@@ -40,10 +40,12 @@ namespace APITest.Controllers
         {
         }
 
-        // PUT api/<PlayerController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        // PUT api/player
+        [HttpPut]
+        [EnableCors("Origins")]
+        public void Put([FromBody] UpdatePackage package)
         {
+            Global.update = package;
         }
 
         // DELETE api/<PlayerController>/5

@@ -6,13 +6,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using OTGStreamToolBackEnd;
 
 namespace APITest
 {
     public class Program
     {
+
         public static void Main(string[] args)
         {
+            Global.update = new UpdatePackage();
             CreateHostBuilder(args).Build().Run();
         }
 
