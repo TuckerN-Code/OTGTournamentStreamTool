@@ -22,9 +22,7 @@ namespace APITest.Controllers
         [HttpGet]
         public List<string> Get()
         {
-            List<string> list = new List<string>();
-            list.Add(Global.update.sendP1Name());
-            return list;
+            return Global.update.toList();
         }
 
         // GET api/<PlayerController>/5

@@ -25,5 +25,22 @@ namespace OTGStreamToolBackEnd
             return Player1Tag;
         }
 
+        public List<string> toList()
+        {
+            List<string> list = new List<string>();
+            list.Add(Player1Tag);
+            list.Add(Player1Prefix);
+            list.Add(Player1Twitter);
+            list.Add(Player1Pronouns);
+            list.Add(Player2Tag);
+            list.Add(Player2Prefix);
+            list.Add(Player2Twitter);
+            list.Add(Player2Pronouns);
+            list.Add(TournamentRound);
+            list.Add(Player1Score);
+            list.Add(Player2Score);
+            return list;
+        }
+
     }
 }

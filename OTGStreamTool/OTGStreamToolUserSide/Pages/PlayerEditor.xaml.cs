@@ -27,8 +27,6 @@ namespace OTGStreamToolUserSide.Pages
             P1Losers.IsEnabled = false;
             P2Losers.IsEnabled = false;
             Fill_TournamentRound();
-
-
         }
 
 
@@ -57,8 +55,17 @@ namespace OTGStreamToolUserSide.Pages
 
         private void UpdateLocalPackage()
         {
+            
             updatePackage.Player1Tag = tbx_Player1Name.Text;
+            if(P1Losers.IsChecked == true)
+            {
+                updatePackage.Player1Tag += " [L]";
+            }
             updatePackage.Player2Tag = tbx_Player2Name.Text;
+            if(P2Losers.IsChecked == true)
+            {
+                updatePackage.Player2Tag += " [L]";
+            }    
             updatePackage.Player1Prefix = tbx_Player1Prefix.Text;
             updatePackage.Player2Prefix = tbx_Player2Prefix.Text;
             updatePackage.Player1Twitter = tbx_Player1Twitter.Text;
