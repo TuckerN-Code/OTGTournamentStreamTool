@@ -16,6 +16,7 @@ namespace APITest
         public static void Main(string[] args)
         {
             Global.update = new UpdatePackage();
+            Global.packageID = 0;
             CreateHostBuilder(args).Build().Run();
         }
 

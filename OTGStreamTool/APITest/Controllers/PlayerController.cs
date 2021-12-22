@@ -22,6 +22,7 @@ namespace APITest.Controllers
         [HttpGet]
         public List<string> Get()
         {
+            Global.update.PackageID = Global.packageID;
             return Global.update.toList();
         }
 
@@ -43,7 +44,9 @@ namespace APITest.Controllers
         [EnableCors("Origins")]
         public void Put([FromBody] UpdatePackage package)
         {
+            Global.packageID = Global.packageID + 1;
             Global.update = package;
+
         }
 
         // DELETE api/<PlayerController>/5

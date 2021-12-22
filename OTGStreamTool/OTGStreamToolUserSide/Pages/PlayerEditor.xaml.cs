@@ -19,16 +19,21 @@ namespace OTGStreamToolUserSide.Pages
     /// </summary>
     public partial class PlayerEditor : Page
     {
-        UpdatePackage updatePackage = new UpdatePackage();
-        AsynchronousClient asynchronous = new AsynchronousClient();
         public PlayerEditor()
         {
             InitializeComponent();
             P1Losers.IsEnabled = false;
             P2Losers.IsEnabled = false;
             Fill_TournamentRound();
+            FillFromGlobal();
+            
+            
         }
 
+        private void LeavePage()
+        {
+            this.NavigationService.Content = new Pages.CommentatorEditor();
+        }
 
         private void Fill_TournamentRound()
         {
@@ -45,41 +50,61 @@ namespace OTGStreamToolUserSide.Pages
             cbx_TournamentRound.SelectedIndex = 1;
         }
 
+        private void FillFromGlobal()
+        {
+            cbx_TournamentRound.Text = Global.updatePackage.TournamentRound;
+            tbx_Player1Name.Text = Global.updatePackage.Player1Tag;
+            tbx_Player2Name.Text = Global.updatePackage.Player2Tag;
+            tbx_Player1Twitter.Text = Global.updatePackage.Player1Twitter;
+            tbx_Player2Twitter.Text = Global.updatePackage.Player2Twitter;
+            tbx_Player1Prefix.Text = Global.updatePackage.Player1Prefix;
+            tbx_Player2Prefix.Text = Global.updatePackage.Player2Prefix;
+            tbx_Player1Pronouns.Text = Global.updatePackage.Player1Pronouns;
+            tbx_Player2Pronouns.Text = Global.updatePackage.Player2Pronouns;
+            tbx_Player1Score.Text = Global.updatePackage.Player1Score;
+            tbx_Player2Score.Text = Global.updatePackage.Player2Score;
+            tbx_Player1Name.Text = Global.updatePackage.Player1Tag;
+            
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             CheckForGrands();
-            UpdateLocalPackage();
-            ApiAccess access = new ApiAccess(updatePackage);
+            UpdatePackage();
+            ApiAccess access = new ApiAccess(Global.updatePackage);
         }
 
 
-        private void UpdateLocalPackage()
+        private void UpdatePackage()
         {
             
-            updatePackage.Player1Tag = tbx_Player1Name.Text;
+            Global.updatePackage.Player1Tag = tbx_Player1Name.Text;
             if(P1Losers.IsChecked == true)
             {
-                updatePackage.Player1Tag += " [L]";
+                Global.updatePackage.Player1Tag += " [L]";
             }
-            updatePackage.Player2Tag = tbx_Player2Name.Text;
+            Global.updatePackage.Player2Tag = tbx_Player2Name.Text;
             if(P2Losers.IsChecked == true)
             {
-                updatePackage.Player2Tag += " [L]";
+                Global.updatePackage.Player2Tag += " [L]";
             }    
-            updatePackage.Player1Prefix = tbx_Player1Prefix.Text;
-            updatePackage.Player2Prefix = tbx_Player2Prefix.Text;
-            updatePackage.Player1Twitter = tbx_Player1Twitter.Text;
-            updatePackage.Player2Twitter = tbx_Player2Twitter.Text;
-            updatePackage.Player1Pronouns = tbx_Player1Pronouns.Text;
-            updatePackage.Player2Pronouns = tbx_Player2Pronouns.Text;
-            updatePackage.Player1Score = tbx_Player1Score.Text;
-            updatePackage.Player2Score = tbx_Player2Score.Text;
-            updatePackage.TournamentRound = cbx_TournamentRound.Text;
+            Global.updatePackage.Player1Prefix = tbx_Player1Prefix.Text;
+            Global.updatePackage.Player2Prefix = tbx_Player2Prefix.Text;
+            Global.updatePackage.Player1Twitter = tbx_Player1Twitter.Text;
+            Global.updatePackage.Player2Twitter = tbx_Player2Twitter.Text;
+            Global.updatePackage.Player1Pronouns = tbx_Player1Pronouns.Text;
+            Global.updatePackage.Player2Pronouns = tbx_Player2Pronouns.Text;
+            Global.updatePackage.Player1Score = tbx_Player1Score.Text;
+            Global.updatePackage.Player2Score = tbx_Player2Score.Text;
+            Global.updatePackage.TournamentRound = cbx_TournamentRound.Text;
 
         }
         private void CheckForGrands()
         {
-
+            if (cbx_TournamentRound.SelectedItem == null)
+            {
+                cbx_TournamentRound.SelectedIndex = 1;
+            }
             if (cbx_TournamentRound.SelectedValue.ToString() == "Grand Finals")
             {
                 P1Losers.IsEnabled = true;
@@ -88,7 +113,9 @@ namespace OTGStreamToolUserSide.Pages
             else
             {
                 P1Losers.IsEnabled = false;
+                P1Losers.IsChecked = false;
                 P2Losers.IsEnabled = false;
+                P2Losers.IsChecked = false;
             }
             
         }

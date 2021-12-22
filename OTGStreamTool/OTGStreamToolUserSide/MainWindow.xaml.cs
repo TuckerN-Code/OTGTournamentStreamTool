@@ -35,7 +35,6 @@ namespace OTGStreamToolUserSide
             InitializeComponent();
             ContentFrame.Content = new Pages.PlayerEditor();
             
-            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

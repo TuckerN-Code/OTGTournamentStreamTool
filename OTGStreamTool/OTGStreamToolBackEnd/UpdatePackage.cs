@@ -20,14 +20,20 @@ namespace OTGStreamToolBackEnd
         public string Player1Score { get; set; }
         public string Player2Score { get; set; }
 
-        public String sendP1Name()
-        {
-            return Player1Tag;
-        }
+        public string Comm1Name { get; set; }
+        public string Comm1Twitter { get; set; }
+        public string Comm2Name { get; set; }
+        public string Comm2Twitter { get; set; }
+
+        public string TournamnetName { get; set; }
+        public string TournamnetEvent { get; set; }
+
+        public int PackageID { get; set; }
 
         public List<string> toList()
         {
             List<string> list = new List<string>();
+            list.Add(PackageID.ToString());
             list.Add(Player1Tag);
             list.Add(Player1Prefix);
             list.Add(Player1Twitter);
