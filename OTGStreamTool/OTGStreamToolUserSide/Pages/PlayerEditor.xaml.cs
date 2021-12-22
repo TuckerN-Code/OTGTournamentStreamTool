@@ -26,13 +26,6 @@ namespace OTGStreamToolUserSide.Pages
             P2Losers.IsEnabled = false;
             Fill_TournamentRound();
             FillFromGlobal();
-            
-            
-        }
-
-        private void LeavePage()
-        {
-            this.NavigationService.Content = new Pages.CommentatorEditor();
         }
 
         private void Fill_TournamentRound()
@@ -71,13 +64,12 @@ namespace OTGStreamToolUserSide.Pages
         {
             CheckForGrands();
             UpdatePackage();
-            ApiAccess access = new ApiAccess(Global.updatePackage);
+            ApiAccess access = new ApiAccess();
         }
 
 
         private void UpdatePackage()
         {
-            
             Global.updatePackage.Player1Tag = tbx_Player1Name.Text;
             if(P1Losers.IsChecked == true)
             {
@@ -118,6 +110,12 @@ namespace OTGStreamToolUserSide.Pages
                 P2Losers.IsChecked = false;
             }
             
+        }
+
+        private void CommentatorPage_Click(object sender, RoutedEventArgs e)
+        {
+            UpdatePackage();
+            this.NavigationService.Content = new Pages.CommentatorEditor();
         }
     }
 }

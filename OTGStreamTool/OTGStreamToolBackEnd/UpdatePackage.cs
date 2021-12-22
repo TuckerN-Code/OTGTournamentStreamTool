@@ -45,6 +45,12 @@ namespace OTGStreamToolBackEnd
             list.Add(TournamentRound);
             list.Add(Player1Score);
             list.Add(Player2Score);
+            list.Add(Comm1Name);
+            list.Add(Comm1Twitter);
+            list.Add(Comm2Name);
+            list.Add(Comm2Twitter);
+            list.Add(TournamnetName);
+            list.Add(TournamnetEvent);
             return list;
         }
 

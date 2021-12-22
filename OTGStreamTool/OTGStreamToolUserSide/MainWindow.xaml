@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:OTGStreamToolUserSide"
         mc:Ignorable="d"
         Title="MainWindow" 
-        MinHeight="300"
+        MinHeight="450"
         MinWidth="1200"
-                Height="300"
+        Height="450"
         Width="1200">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Frame x:Name="ContentFrame"/>
+            <Frame x:Name="ContentFrame" NavigationUIVisibility="Hidden"/>
         </StackPanel>
     </Grid>
 </Window>

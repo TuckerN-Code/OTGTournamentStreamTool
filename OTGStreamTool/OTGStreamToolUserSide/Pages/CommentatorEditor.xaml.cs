@@ -23,6 +23,34 @@ namespace OTGStreamToolUserSide.Pages
         public CommentatorEditor()
         {
             InitializeComponent();
+            FillFromGlobal();
+        }
+
+        private void UpdateGlobalPackage()
+        {
+            Global.updatePackage.Comm1Name = Comm1Name.Text;
+            Global.updatePackage.Comm2Name = Comm2Name.Text;
+            Global.updatePackage.Comm1Twitter = Comm1Twitter.Text;
+            Global.updatePackage.Comm2Twitter = Comm2Twitter.Text;
+        }
+
+        private void FillFromGlobal()
+        {
+            Comm1Name.Text = Global.updatePackage.Comm1Name;
+            Comm1Twitter.Text = Global.updatePackage.Comm1Twitter;
+            Comm2Name.Text = Global.updatePackage.Comm2Name;
+            Comm2Twitter.Text = Global.updatePackage.Comm2Twitter;
+        }
+
+        private void PlayerPageNav_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateGlobalPackage();
+            this.NavigationService.Content = new Pages.PlayerEditor();
+        }
+
+        private void UpdateBotton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

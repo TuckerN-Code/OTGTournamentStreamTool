@@ -14,9 +14,8 @@ namespace OTGStreamToolUserSide
     {
         private UpdatePackage updatePackage = new UpdatePackage();
         private static HttpClient client = new HttpClient();
-        public ApiAccess(UpdatePackage inPack)
+        public ApiAccess()
         {
-            updatePackage = inPack;
             //Task.Run(() => GetTaskAsync("https://localhost:5001/api/player")).Wait();
             Task.Run(() => UpdateInfoAsync()).Wait();
         }
@@ -24,7 +23,7 @@ namespace OTGStreamToolUserSide
         private async Task UpdateInfoAsync()
         {
             
-            HttpResponseMessage responce = await client.PutAsJsonAsync("https://localhost:5001/api/player", updatePackage);
+            HttpResponseMessage responce = await client.PutAsJsonAsync("https://localhost:5001/api/player", Global.updatePackage);
 
             responce.EnsureSuccessStatusCode();
         }
