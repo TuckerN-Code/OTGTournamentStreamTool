@@ -12,8 +12,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{2B698DDD-2F2D-48DD-B558-B5C282D08BDA}"
 	ProjectSection(SolutionItems) = preProject
 		StreamToolHTML\HTMLPage1.html = StreamToolHTML\HTMLPage1.html
-		StreamToolHTML\InGame.css = StreamToolHTML\InGame.css
-		StreamToolHTML\StreamInGameMockUphtml.html = StreamToolHTML\StreamInGameMockUphtml.html
+		StreamToolHTML\Mockup\InGame.css = StreamToolHTML\Mockup\InGame.css
+		StreamToolHTML\Mockup\StreamInGameMockUphtml.html = StreamToolHTML\Mockup\StreamInGameMockUphtml.html
 	EndProjectSection
 EndProject
 Global

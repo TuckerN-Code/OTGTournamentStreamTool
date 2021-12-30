@@ -17,6 +17,7 @@ namespace APITest
         {
             Global.update = new UpdatePackage();
             Global.packageID = 0;
+            FillGlobal();
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -26,5 +27,14 @@ namespace APITest
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+        public static void FillGlobal()
+        {
+            Global.update.Player1Tag = "Celsus";
+            Global.update.Player1Score = "2";
+            Global.update.Player2Score = "0";
+            Global.update.Player2Tag = "D5";
+        }
     }
+
 }
