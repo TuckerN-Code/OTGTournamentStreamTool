@@ -10,5 +10,6 @@ namespace OTGStreamToolUserSide
     public static class Global
     {
         public static UpdatePackage updatePackage = new UpdatePackage();
+        public static string[] args;
     }
 }

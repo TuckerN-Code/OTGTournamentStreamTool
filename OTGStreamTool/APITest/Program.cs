@@ -18,6 +18,7 @@ namespace APITest
             Global.update = new UpdatePackage();
             Global.packageID = 0;
             FillGlobal();
+           
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -26,6 +27,7 @@ namespace APITest
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("https://localhost:5549");
                 });
 
         public static void FillGlobal()

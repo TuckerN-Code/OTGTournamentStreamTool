@@ -23,7 +23,7 @@ namespace OTGStreamToolUserSide
         private async Task UpdateInfoAsync()
         {
             
-            HttpResponseMessage responce = await client.PutAsJsonAsync("https://localhost:5001/api/player", Global.updatePackage);
+            HttpResponseMessage responce = await client.PostAsJsonAsync("http://localhost:5549/players", Global.updatePackage);
 
             responce.EnsureSuccessStatusCode();
         }

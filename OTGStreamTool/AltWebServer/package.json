@@ -1,0 +1,12 @@
+{
+  "name": "alt-web-server",
+  "version": "0.0.0",
+  "description": "AltWebServer",
+  "main": "server.js",
+  "author": {
+    "name": "Tucker Nulty"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
