@@ -1,3 +1,8 @@
+.body {
+    background-image: url('InGameMockup.png');
+    background-repeat:no-repeat;
+}
+
 .Scoreboard {
     text-align: center;
 }

@@ -18,11 +18,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using OTGStreamToolUserSide;
-using APITest;
+
 
 namespace OTGStreamToolUserSide
 {
@@ -36,7 +33,7 @@ namespace OTGStreamToolUserSide
         {
             InitializeComponent();
             ContentFrame.Content = new Pages.PlayerEditor();
-            //HostApi();
+            HostJSAPI();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -49,12 +46,19 @@ namespace OTGStreamToolUserSide
             
         }
 
-        private static async Task HostApi()
+        private static void HostJSAPI()
         {
-           await Task.Run(() => APITest.Program.Main(Global.args));    
+            Global.process = new Process();
+            Global.process.StartInfo.CreateNoWindow = true;
+
+            Global.process.StartInfo.FileName = "app-win.exe";
+
+            Global.process.Start();
         }
 
-
-
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Global.process.Close();
+        }
     }
 }

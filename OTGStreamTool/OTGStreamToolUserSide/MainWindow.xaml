@@ -9,7 +9,8 @@
         MinHeight="450"
         MinWidth="1200"
         Height="450"
-        Width="1200">
+        Width="1200"
+        Closing="Window_Closing">
     <Grid>
         <StackPanel Orientation="Vertical">
             <Frame x:Name="ContentFrame" NavigationUIVisibility="Hidden"/>

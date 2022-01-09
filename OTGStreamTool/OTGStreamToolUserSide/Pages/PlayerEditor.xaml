@@ -97,8 +97,8 @@
             </Grid.RowDefinitions>
 
             <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Content="Update" Click="Button_Click" Style="{StaticResource UpdateButton}"/>
-            <Button Grid.Column="0" Grid.Row="0" Content="Swap" Style="{StaticResource ActionButtons}"/>
-            <Button Grid.Column="1" Grid.Row="0" Content="Clear" Style="{StaticResource ActionButtons}"/>
+            <Button Grid.Column="0" Grid.Row="0" Content="Swap" Click="SwapButton_Click" Style="{StaticResource ActionButtons}"/>
+            <Button Grid.Column="1" Grid.Row="0" Content="Clear" Click="ClearButton_Click" Style="{StaticResource ActionButtons}"/>
         </Grid>
 
         <Grid Grid.Row="0" Grid.Column="1">

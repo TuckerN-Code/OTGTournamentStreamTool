@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{2B698DDD-2
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "AltWebServer", "AltWebServer\AltWebServer.njsproj", "{F356F256-60DB-4C95-80F1-58F3744DB4F9}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodeWebServer", "NodeWebServer\NodeWebServer.njsproj", "{7B4BD3B6-B12E-47CE-9918-1A048CF5143F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{F356F256-60DB-4C95-80F1-58F3744DB4F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F356F256-60DB-4C95-80F1-58F3744DB4F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F356F256-60DB-4C95-80F1-58F3744DB4F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B4BD3B6-B12E-47CE-9918-1A048CF5143F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B4BD3B6-B12E-47CE-9918-1A048CF5143F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B4BD3B6-B12E-47CE-9918-1A048CF5143F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B4BD3B6-B12E-47CE-9918-1A048CF5143F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,6 +17,7 @@ namespace OTGStreamToolUserSide
         public ApiAccess()
         {
             //Task.Run(() => GetTaskAsync("https://localhost:5001/api/player")).Wait();
+            Global.updatePackage.PackageID++;
             Task.Run(() => UpdateInfoAsync()).Wait();
         }
 

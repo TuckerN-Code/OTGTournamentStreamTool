@@ -41,6 +41,7 @@ namespace OTGStreamToolUserSide.Pages
             cbx_TournamentRound.Items.Add("Losers Finals");
             cbx_TournamentRound.Items.Add("Grand Finals");
             cbx_TournamentRound.SelectedIndex = 1;
+            
         }
 
         private void FillFromGlobal()
@@ -117,5 +118,44 @@ namespace OTGStreamToolUserSide.Pages
             UpdatePackage();
             this.NavigationService.Content = new Pages.CommentatorEditor();
         }
+
+        private void SwapButton_Click(object sender, RoutedEventArgs e)
+        {
+            string temp;
+            temp = tbx_Player1Name.Text;
+            tbx_Player1Name.Text = tbx_Player2Name.Text;
+            tbx_Player2Name.Text = temp;
+
+            temp = tbx_Player1Prefix.Text;
+            tbx_Player1Prefix.Text = tbx_Player2Prefix.Text;
+            tbx_Player2Prefix.Text = temp;
+
+            temp = tbx_Player1Twitter.Text;
+            tbx_Player1Twitter.Text = tbx_Player2Twitter.Text;
+            tbx_Player2Twitter.Text = temp;
+
+            temp = tbx_Player1Pronouns.Text;
+            tbx_Player1Pronouns.Text = tbx_Player2Pronouns.Text;
+            tbx_Player2Pronouns.Text = temp;
+
+            temp = tbx_Player1Score.Text;
+            tbx_Player1Score.Text = tbx_Player2Score.Text;
+            tbx_Player2Score.Text = temp;
+        }
+
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            tbx_Player1Name.Clear();
+            tbx_Player2Name.Clear();
+            tbx_Player1Twitter.Clear();
+            tbx_Player2Twitter.Clear();
+            tbx_Player1Prefix.Clear();
+            tbx_Player2Prefix.Clear();
+            tbx_Player1Pronouns.Clear();
+            tbx_Player2Pronouns.Clear();
+            tbx_Player1Score.Text = "0";
+            tbx_Player2Score.Text = "0";
+        }
+
     }
 }

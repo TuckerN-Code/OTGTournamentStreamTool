@@ -6,15 +6,10 @@
 	  <PublishSingleFile>true</PublishSingleFile>
 
     <Nullable>enable</Nullable>
-    <UseWPF>true</UseWPF>
+    <UseWPF>True</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
-<PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\APITest\APITest.csproj" />
     <ProjectReference Include="..\OTGStreamToolBackEnd\OTGStreamToolBackEnd.csproj" />
   </ItemGroup>
 
