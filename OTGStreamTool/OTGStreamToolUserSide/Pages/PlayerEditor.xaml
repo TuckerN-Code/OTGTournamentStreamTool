@@ -131,6 +131,10 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Button x:Name="CommentatorPage" Click="CommentatorPage_Click" Content="Tourament Info" Style="{StaticResource ActionButtons}"/>
+
+            <Button x:Name="SmashGG" Click="SmashGG_Click" Style="{StaticResource ActionButtons}" Grid.Row="2">
+                <TextBlock  TextWrapping="Wrap" Text="Stream Sets"/>
+            </Button>
         </Grid>
         
     </Grid>

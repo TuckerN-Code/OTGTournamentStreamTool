@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -66,6 +67,12 @@ namespace OTGStreamToolUserSide.Pages
             CheckForGrands();
             UpdatePackage();
             ApiAccess access = new ApiAccess();
+        }
+
+        private void SmashGG_Click(object sender, RoutedEventArgs e)
+        {
+            StreamQueue streamQueue = new StreamQueue(this);
+            streamQueue.Show();
         }
 
 

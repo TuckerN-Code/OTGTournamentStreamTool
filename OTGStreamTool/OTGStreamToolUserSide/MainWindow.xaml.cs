@@ -28,6 +28,7 @@ namespace OTGStreamToolUserSide
     /// </summary>
     public partial class MainWindow : Window
     {
+        
 
         public MainWindow()
         {
@@ -58,7 +59,8 @@ namespace OTGStreamToolUserSide
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Global.process.Close();
+            if (Global.process != null)
+                Global.process.Close();
         }
     }
 }
