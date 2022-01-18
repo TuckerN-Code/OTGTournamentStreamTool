@@ -4,13 +4,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OTGStreamToolUserSide", "OTGStreamToolUserSide\OTGStreamToolUserSide.csproj", "{3A43E4E8-EEC8-4A9B-997C-091C909EE885}"
-	ProjectSection(ProjectDependencies) = postProject
-		{F7FC045C-4437-42C4-9B77-6D97B8B25039} = {F7FC045C-4437-42C4-9B77-6D97B8B25039}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OTGStreamToolBackEnd", "OTGStreamToolBackEnd\OTGStreamToolBackEnd.csproj", "{6EC51387-9B14-4848-BBC2-555023CC1984}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITest", "APITest\APITest.csproj", "{F7FC045C-4437-42C4-9B77-6D97B8B25039}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{2B698DDD-2F2D-48DD-B558-B5C282D08BDA}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,8 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{2B698DDD-2
 		StreamToolHTML\Mockup\InGame.css = StreamToolHTML\Mockup\InGame.css
 		StreamToolHTML\Mockup\StreamInGameMockUphtml.html = StreamToolHTML\Mockup\StreamInGameMockUphtml.html
 	EndProjectSection
-EndProject
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "AltWebServer", "AltWebServer\AltWebServer.njsproj", "{F356F256-60DB-4C95-80F1-58F3744DB4F9}"
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodeWebServer", "NodeWebServer\NodeWebServer.njsproj", "{7B4BD3B6-B12E-47CE-9918-1A048CF5143F}"
 EndProject
@@ -37,14 +30,6 @@ Global
 		{6EC51387-9B14-4848-BBC2-555023CC1984}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EC51387-9B14-4848-BBC2-555023CC1984}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EC51387-9B14-4848-BBC2-555023CC1984}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F7FC045C-4437-42C4-9B77-6D97B8B25039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7FC045C-4437-42C4-9B77-6D97B8B25039}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7FC045C-4437-42C4-9B77-6D97B8B25039}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7FC045C-4437-42C4-9B77-6D97B8B25039}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F356F256-60DB-4C95-80F1-58F3744DB4F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F356F256-60DB-4C95-80F1-58F3744DB4F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F356F256-60DB-4C95-80F1-58F3744DB4F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F356F256-60DB-4C95-80F1-58F3744DB4F9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7B4BD3B6-B12E-47CE-9918-1A048CF5143F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7B4BD3B6-B12E-47CE-9918-1A048CF5143F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B4BD3B6-B12E-47CE-9918-1A048CF5143F}.Release|Any CPU.ActiveCfg = Release|Any CPU
