@@ -15,5 +15,8 @@ namespace OTGStreamToolUserSide
         public static string[]? args;
 
         public static Process? process;
+
+        public static string? TournamentSlug;
+        public static string? SmashGGAuth;
     }
 }

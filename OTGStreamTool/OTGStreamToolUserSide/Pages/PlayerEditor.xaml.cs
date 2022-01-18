@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -41,7 +42,7 @@ namespace OTGStreamToolUserSide.Pages
             cbx_TournamentRound.Items.Add("Losers Finals");
             cbx_TournamentRound.Items.Add("Grand Finals");
             cbx_TournamentRound.SelectedIndex = 1;
-
+            
         }
 
         private void FillFromGlobal()
@@ -58,7 +59,7 @@ namespace OTGStreamToolUserSide.Pages
             tbx_Player1Score.Text = Global.updatePackage.Player1Score;
             tbx_Player2Score.Text = Global.updatePackage.Player2Score;
             tbx_Player1Name.Text = Global.updatePackage.Player1Tag;
-
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -68,20 +69,10 @@ namespace OTGStreamToolUserSide.Pages
             ApiAccess access = new ApiAccess();
         }
 
-        private void clearButton_Click(object sender, RoutedEventArgs e)
+        private void SmashGG_Click(object sender, RoutedEventArgs e)
         {
-            cbx_TournamentRound.Text = "";
-            tbx_Player1Name.Text = "";
-            tbx_Player2Name.Text = "";
-            tbx_Player1Twitter.Text = "";
-            tbx_Player2Twitter.Text = "";
-            tbx_Player1Prefix.Text = "";
-            tbx_Player2Prefix.Text = "";
-            tbx_Player1Pronouns.Text  = "";
-            tbx_Player2Pronouns.Text = "";
-            tbx_Player1Score.Text  = "";
-            tbx_Player2Score.Text = "";
-            tbx_Player1Name.Text = "";
+            StreamQueue streamQueue = new StreamQueue(this);
+            streamQueue.Show();
         }
 
 
