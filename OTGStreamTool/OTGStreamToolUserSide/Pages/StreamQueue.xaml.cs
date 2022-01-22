@@ -23,28 +23,31 @@ namespace OTGStreamToolUserSide.Pages
         public StreamQueue(PlayerEditor player)
         {
             InitializeComponent();
-            Global.TournamentSlug = "tournament/streamtooltestingtournamnet";
+            Global.TournamentSlug = "";
             Global.SmashGGAuth = "";
             m_player = player;
         }
 
         private void FillFromStreamQueue(TournamentType tournament)
         {
-            List<StreamSetInfo> streams = new List<StreamSetInfo>();
-            foreach(StreamQueueType streamQueue in tournament.streamQueue)
+            if (tournament != null)
             {
-                foreach(SetsType set in streamQueue.sets)
+                List<StreamSetInfo> streams = new List<StreamSetInfo>();
+                foreach (StreamQueueType streamQueue in tournament.streamQueue)
                 {
-                    StreamSetInfo setInfo = new StreamSetInfo();
-                    setInfo.Player1Name = set.slots[0].entrant.participants[0].gamerTag;
-                    setInfo.Player2Name = set.slots[1].entrant.participants[0].gamerTag;
-                    setInfo.P1Pre = set.slots[0].entrant.participants[0].prefix;
-                    setInfo.P2Pre = set.slots[1].entrant.participants[0].prefix;
-                    setInfo.StreamName = streamQueue.stream.streamName;
-                    streams.Add(setInfo);
+                    foreach (SetsType set in streamQueue.sets)
+                    {
+                        StreamSetInfo setInfo = new StreamSetInfo();
+                        setInfo.Player1Name = set.slots[0].entrant.participants[0].gamerTag;
+                        setInfo.Player2Name = set.slots[1].entrant.participants[0].gamerTag;
+                        setInfo.P1Pre = set.slots[0].entrant.participants[0].prefix;
+                        setInfo.P2Pre = set.slots[1].entrant.participants[0].prefix;
+                        setInfo.StreamName = streamQueue.stream.streamName;
+                        streams.Add(setInfo);
+                    }
                 }
+                ic_Sets.ItemsSource = streams;
             }
-            ic_Sets.ItemsSource = streams;
         }
 
 
@@ -76,6 +79,18 @@ namespace OTGStreamToolUserSide.Pages
         private void Update_Click(object sender, RoutedEventArgs e)
         {
             UpdateFromSmashGG();
+        }
+
+        private void SetSlug(object sender, RoutedEventArgs e)
+        {
+            SetSlugBox box = new SetSlugBox();
+            box.Show();
+        }
+
+        private void AuthToken_Click(object sender, RoutedEventArgs e)
+        {
+            SetAuthCode code = new SetAuthCode();
+            code.Show();
         }
     }
     internal class StreamSetInfo

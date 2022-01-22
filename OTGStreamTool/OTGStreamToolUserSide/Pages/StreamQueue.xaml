@@ -11,25 +11,26 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="2*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <ItemsControl x:Name="ic_Sets">
+        <ItemsControl x:Name="ic_Sets" Grid.ColumnSpan="3">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Button x:Name="SelectSet" Click="SelectSet_Click">
+                    <Button x:Name="SelectSet" Click="SelectSet_Click" Style="{StaticResource ActionButtons}">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding Player1Name}" Grid.Column="0"/>
-                            <TextBlock Text="{Binding Player2Name}" Grid.Column="1"/>
-                            <TextBlock Text="{Binding Stream}" Grid.Column="2"/>
+                            <TextBlock Text="{Binding Player1Name}" Grid.Column="0" Style="{StaticResource StreamQueueInfo}"/>
+                            <TextBlock Text="{Binding Player2Name}" Grid.Column="1" Style="{StaticResource StreamQueueInfo}"/>
+                            <TextBlock Text="{Binding StreamName}" Grid.Column="2" Style="{StaticResource StreamQueueInfo}"/>
                         </Grid>
                     </Button>
                 </DataTemplate>
@@ -37,5 +38,7 @@
         </ItemsControl>
 
         <Button Name="Update" Content="Update" Click="Update_Click" Style="{StaticResource ActionButtons}" Grid.Row="1"/>
+        <Button Name="TournamentSlug" Content="Set Tournament Slug" Click="SetSlug" Style="{StaticResource ActionButtons}" Grid.Row="1" Grid.Column="1"/>
+        <Button Name="AuthToken" Content="Set Smash.GG Token" Click="AuthToken_Click" Style="{StaticResource ActionButtons}" Grid.Row="1" Grid.Column="2"/>
     </Grid>
 </Window>

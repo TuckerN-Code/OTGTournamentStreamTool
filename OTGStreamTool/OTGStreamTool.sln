@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OTGStreamToolBackEnd", "OTG
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{2B698DDD-2F2D-48DD-B558-B5C282D08BDA}"
 	ProjectSection(SolutionItems) = preProject
+		StreamToolHTML\BiB3\MainOverlay\BiB3GameOverlay.css = StreamToolHTML\BiB3\MainOverlay\BiB3GameOverlay.css
+		StreamToolHTML\BiB3\MainOverlay\BiB3GameOverlay.html = StreamToolHTML\BiB3\MainOverlay\BiB3GameOverlay.html
+		StreamToolHTML\BiB3\SecondaryOverlay\BiBAltOverlay.html = StreamToolHTML\BiB3\SecondaryOverlay\BiBAltOverlay.html
+		StreamToolHTML\BiB3\CommentatorsOverlay\BiBCommentators.HTML = StreamToolHTML\BiB3\CommentatorsOverlay\BiBCommentators.HTML
 		StreamToolHTML\HTMLPage1.html = StreamToolHTML\HTMLPage1.html
 		StreamToolHTML\Mockup\InGame.css = StreamToolHTML\Mockup\InGame.css
 		StreamToolHTML\Mockup\StreamInGameMockUphtml.html = StreamToolHTML\Mockup\StreamInGameMockUphtml.html
