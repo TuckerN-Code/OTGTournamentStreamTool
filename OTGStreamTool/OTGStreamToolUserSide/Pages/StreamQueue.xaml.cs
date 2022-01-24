@@ -30,8 +30,9 @@ namespace OTGStreamToolUserSide.Pages
 
         private void FillFromStreamQueue(TournamentType tournament)
         {
-            if (tournament != null)
+            try
             {
+
                 List<StreamSetInfo> streams = new List<StreamSetInfo>();
                 foreach (StreamQueueType streamQueue in tournament.streamQueue)
                 {
@@ -47,6 +48,12 @@ namespace OTGStreamToolUserSide.Pages
                     }
                 }
                 ic_Sets.ItemsSource = streams;
+
+            }
+            catch (Exception ex)
+            {
+                StatusWindows.StatusOutputWindow win = new StatusWindows.StatusOutputWindow("Unable to retrive stream queue");
+                win.Show();
             }
         }
 
@@ -60,7 +67,8 @@ namespace OTGStreamToolUserSide.Pages
             }
             catch (Exception ex)
             {
-
+                StatusWindows.StatusOutputWindow win = new StatusWindows.StatusOutputWindow("Unable to connect to smash.gg");
+                win.Show();
             }
             
         }
