@@ -33,7 +33,11 @@ namespace OTGStreamToolUserSide
         public MainWindow()
         {
             InitializeComponent();
+            Global.updatePackage.Player1Score = "0";
+            Global.updatePackage.TournamentRound = "Tournament Round";
+            Global.updatePackage.Player2Score = "0";
             ContentFrame.Content = new Pages.PlayerEditor();
+
             HostJSAPI();
         }
 

@@ -27,6 +27,7 @@ namespace OTGStreamToolUserSide.Pages
             P2Losers.IsEnabled = false;
             Fill_TournamentRound();
             FillFromGlobal();
+            
         }
 
         private void Fill_TournamentRound()
@@ -41,13 +42,11 @@ namespace OTGStreamToolUserSide.Pages
             cbx_TournamentRound.Items.Add("Losers Quarterfinals");
             cbx_TournamentRound.Items.Add("Losers Finals");
             cbx_TournamentRound.Items.Add("Grand Finals");
-            cbx_TournamentRound.SelectedIndex = 1;
-            
         }
 
         private void FillFromGlobal()
         {
-            cbx_TournamentRound.Text = Global.updatePackage.TournamentRound;
+            cbx_TournamentRound.SelectedIndex = Global.updatePackage.RoundIndex;
             tbx_Player1Name.Text = Global.updatePackage.Player1Tag;
             tbx_Player2Name.Text = Global.updatePackage.Player2Tag;
             tbx_Player1Twitter.Text = Global.updatePackage.Player1Twitter;
@@ -72,6 +71,8 @@ namespace OTGStreamToolUserSide.Pages
         private void SmashGG_Click(object sender, RoutedEventArgs e)
         {
             StreamQueue streamQueue = new StreamQueue(this);
+            streamQueue.Owner = Window.GetWindow(this);
+            streamQueue.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             streamQueue.Show();
         }
 
@@ -97,6 +98,7 @@ namespace OTGStreamToolUserSide.Pages
             Global.updatePackage.Player1Score = tbx_Player1Score.Text;
             Global.updatePackage.Player2Score = tbx_Player2Score.Text;
             Global.updatePackage.TournamentRound = cbx_TournamentRound.Text;
+            Global.updatePackage.RoundIndex = cbx_TournamentRound.SelectedIndex;
 
         }
         private void CheckForGrands()
@@ -151,6 +153,20 @@ namespace OTGStreamToolUserSide.Pages
         }
 
         private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            tbx_Player1Name.Clear();
+            tbx_Player2Name.Clear();
+            tbx_Player1Twitter.Clear();
+            tbx_Player2Twitter.Clear();
+            tbx_Player1Prefix.Clear();
+            tbx_Player2Prefix.Clear();
+            tbx_Player1Pronouns.Clear();
+            tbx_Player2Pronouns.Clear();
+            tbx_Player1Score.Text = "0";
+            tbx_Player2Score.Text = "0";
+        }
+
+        public void ClearFields()
         {
             tbx_Player1Name.Clear();
             tbx_Player2Name.Clear();

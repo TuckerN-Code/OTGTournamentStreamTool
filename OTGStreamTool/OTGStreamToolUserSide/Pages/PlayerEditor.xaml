@@ -5,12 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OTGStreamToolUserSide.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="1200"
       Background="White"
       Title="PlayerEditor"
       >
-
-    <Grid>
+    <Grid Width="1090">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width=".5*"/>
@@ -100,7 +98,6 @@
             <Button Grid.Column="0" Grid.Row="0" Content="Swap" Click="SwapButton_Click" Style="{StaticResource ActionButtons}"/>
             <Button Grid.Column="1" Grid.Row="0" Content="Clear" Click="ClearButton_Click" Style="{StaticResource ActionButtons}"/>
         </Grid>
-
         <Grid Grid.Row="0" Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -113,13 +110,11 @@
             </Grid.RowDefinitions>
 
             <TextBlock Text="Score" Style="{StaticResource ScoreText}" Grid.ColumnSpan="2"/>
-            <TextBox x:Name="tbx_Player1Score" Grid.Row="1" Grid.Column="0" Style="{StaticResource ScoreInput}"/>
-            <TextBox x:Name="tbx_Player2Score" Grid.Row="1" Grid.Column="1" Style="{StaticResource ScoreInput}"/>
-            <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Text="Tournament Round" Style="{StaticResource TournamentRoundText}"/>
-            <ComboBox x:Name="cbx_TournamentRound" Grid.Row="2" Grid.ColumnSpan="2"  Style="{StaticResource TournamentRound}"/>
+            <TextBox x:Name="tbx_Player1Score" Grid.Row="1" Grid.Column="0"  Style="{StaticResource ScoreInput}"/>
+            <TextBox x:Name="tbx_Player2Score" Grid.Row="1" Grid.Column="1"  Style="{StaticResource ScoreInput}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+            <ComboBox x:Name="cbx_TournamentRound" Grid.Row="2" Grid.ColumnSpan="2"  Style="{StaticResource TournamentRound}" IsReadOnly="True" HorizontalContentAlignment="Center"/>
 
         </Grid>
-
         <Grid Grid.Row="1" Grid.Column="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -136,6 +131,6 @@
                 <TextBlock  TextWrapping="Wrap" Text="Stream Sets"/>
             </Button>
         </Grid>
-        
+
     </Grid>
 </Page>

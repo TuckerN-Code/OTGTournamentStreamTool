@@ -22,11 +22,12 @@ namespace OTGStreamToolUserSide.Pages
         public SetSlugBox()
         {
             InitializeComponent();
+            SlugTextBox.Text = Properties.Settings.Default.TournySlug;
         }
 
         private void Update_Click(object sender, RoutedEventArgs e)
         {
-            Global.TournamentSlug = SlugTextBox.Text;
+            Properties.Settings.Default.TournySlug = SlugTextBox.Text;
             this.Close();
         }
     }

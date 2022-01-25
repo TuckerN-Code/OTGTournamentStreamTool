@@ -6,7 +6,7 @@ namespace OTGStreamToolBackEnd
 {
     public class UpdatePackage
     {
-        public string Player1Tag { get; set; }
+        public string Player1Tag { get; set; } 
         public string Player1Prefix { get; set; }
         public string Player1Twitter { get; set; }
         public string Player1Pronouns { get; set; }
@@ -29,6 +29,8 @@ namespace OTGStreamToolBackEnd
         public string TournamnetEvent { get; set; }
 
         public int PackageID { get; set; }
+
+        public int RoundIndex { get; set; }
 
         public List<string> toList()
         {

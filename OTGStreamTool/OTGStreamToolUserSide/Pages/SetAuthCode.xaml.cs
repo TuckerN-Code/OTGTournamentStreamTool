@@ -22,10 +22,11 @@ namespace OTGStreamToolUserSide.Pages
         public SetAuthCode()
         {
             InitializeComponent();
+            AuthTextBox.Text = Properties.Settings.Default.SmashGGAuthCode;
         }
         private void Update_Click(object sender, RoutedEventArgs e)
         {
-            Global.SmashGGAuth = AuthTextBox.Text;
+            Properties.Settings.Default.SmashGGAuthCode = AuthTextBox.Text;
             this.Close();
         }
     }

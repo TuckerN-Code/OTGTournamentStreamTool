@@ -23,8 +23,6 @@ namespace OTGStreamToolUserSide.Pages
         public StreamQueue(PlayerEditor player)
         {
             InitializeComponent();
-            Global.TournamentSlug = "";
-            Global.SmashGGAuth = "";
             m_player = player;
         }
 
@@ -53,6 +51,8 @@ namespace OTGStreamToolUserSide.Pages
             catch (Exception ex)
             {
                 StatusWindows.StatusOutputWindow win = new StatusWindows.StatusOutputWindow("Unable to retrive stream queue");
+                win.Owner = Window.GetWindow(this);
+                win.WindowStartupLocation = WindowStartupLocation.CenterOwner;
                 win.Show();
             }
         }
@@ -63,11 +63,13 @@ namespace OTGStreamToolUserSide.Pages
             try
             {
                 SmashGG smashGG = new SmashGG();
-                FillFromStreamQueue(Task<TournamentType>.Run(() => smashGG.getStreamPlayers(Global.TournamentSlug, Global.SmashGGAuth)).Result);
+                FillFromStreamQueue(Task<TournamentType>.Run(() => smashGG.getStreamPlayers(Properties.Settings.Default.TournySlug, Properties.Settings.Default.SmashGGAuthCode)).Result);
             }
             catch (Exception ex)
             {
                 StatusWindows.StatusOutputWindow win = new StatusWindows.StatusOutputWindow("Unable to connect to smash.gg");
+                win.Owner = Window.GetWindow(this);
+                win.WindowStartupLocation = WindowStartupLocation.CenterOwner;
                 win.Show();
             }
             
@@ -77,10 +79,13 @@ namespace OTGStreamToolUserSide.Pages
         {
             var button = sender as Button;
             StreamSetInfo setInfo = button.DataContext as StreamSetInfo;
+            m_player.ClearFields();
+            Properties.Settings.Default.Save();
             m_player.tbx_Player1Name.Text = setInfo.Player1Name;
             m_player.tbx_Player2Name.Text = setInfo.Player2Name;
             m_player.tbx_Player1Prefix.Text = setInfo.P1Pre;
             m_player.tbx_Player2Prefix.Text = setInfo.P2Pre;
+
             this.Close();
         }
 
@@ -92,12 +97,16 @@ namespace OTGStreamToolUserSide.Pages
         private void SetSlug(object sender, RoutedEventArgs e)
         {
             SetSlugBox box = new SetSlugBox();
+            box.Owner = Window.GetWindow(this);
+            box.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             box.Show();
         }
 
         private void AuthToken_Click(object sender, RoutedEventArgs e)
         {
             SetAuthCode code = new SetAuthCode();
+            code.Owner = Window.GetWindow(this);
+            code.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             code.Show();
         }
     }

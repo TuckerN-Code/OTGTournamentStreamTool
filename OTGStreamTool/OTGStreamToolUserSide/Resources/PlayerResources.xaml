@@ -38,8 +38,10 @@
 
     <Style x:Key="ScoreInput" TargetType="TextBox">
         <Setter Property="FontSize" Value="36"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="10"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5,0,5,0"/>
         <Setter Property="BorderBrush" Value="Black"/>
     </Style>
 
@@ -78,11 +80,18 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="FontFamily" Value="20"/>
     </Style>
+    
 
     <Style x:Key="StreamQueueButton" TargetType="Button">
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="Margin" Value="5"/>
         <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+    </Style>
 
+    <Style x:Key="StreamQueueBorder" TargetType="Border">
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
     </Style>
 </ResourceDictionary>

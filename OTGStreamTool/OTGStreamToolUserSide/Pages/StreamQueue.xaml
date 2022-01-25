@@ -22,15 +22,21 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Button x:Name="SelectSet" Click="SelectSet_Click" Style="{StaticResource ActionButtons}">
-                        <Grid>
+                        <Grid Width="{Binding ActualWidth, ElementName=SelectSet, Mode=OneWay}">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding Player1Name}" Grid.Column="0" Style="{StaticResource StreamQueueInfo}"/>
-                            <TextBlock Text="{Binding Player2Name}" Grid.Column="1" Style="{StaticResource StreamQueueInfo}"/>
-                            <TextBlock Text="{Binding StreamName}" Grid.Column="2" Style="{StaticResource StreamQueueInfo}"/>
+                            <Border Grid.Column="0" Style="{StaticResource StreamQueueBorder}">
+                                <TextBlock Text="{Binding Player1Name}" Style="{StaticResource StreamQueueInfo}"/>
+                            </Border>
+                            <Border Grid.Column="1" Style="{StaticResource StreamQueueBorder}">
+                                <TextBlock Text="{Binding Player2Name}" Style="{StaticResource StreamQueueInfo}"/>
+                            </Border>
+                            <Border Grid.Column="2" Style="{StaticResource StreamQueueBorder}">
+                                <TextBlock Text="{Binding StreamName}" Style="{StaticResource StreamQueueInfo}"/>
+                            </Border>
                         </Grid>
                     </Button>
                 </DataTemplate>
