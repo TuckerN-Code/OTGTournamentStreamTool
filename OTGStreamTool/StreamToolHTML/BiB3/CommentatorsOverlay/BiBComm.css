@@ -1,66 +1,57 @@
-@font-face {font-family: BebasNeue; src: url('BebasNeue-Regular.otf');}
+@font-face {
+    font-family: BebasNeue;
+    src: url('BebasNeue-Regular.otf');
+}
 
 .body {
-    background-image: url("mainoverlay.png");
-    background-repeat:no-repeat;
+    background-image: url("Commentators_overlays.png");
+    background-repeat: no-repeat;
     background-size: 1980px, 1080px;
     margin: 0px;
-    height:1080px;
-    width:1980px;
+    height: 1080px;
+    width: 1980px;
 }
 
 .Scoreboard {
     text-align: center;
     height: 125px;
 }
+
     .Scoreboard > table {
-        padding-top: 20px;
-        padding-left:331px;
+        padding-top: 860px;
+        padding-left: 90px;
         height: inherit;
     }
 
     .Scoreboard > div {
         vertical-align: top;
         display: inline;
-        height:inherit;
+        height: inherit;
     }
 
-.TournamentRound
-{
-    font-family:BebasNeue;
-    text-align:center;
-    font-size:30px;
-    color:white;
-    padding-top:10px;
-}
-#Player1NameHolder {
-    min-width: 476px;
-    max-width: 476px;
+.TournamentRound {
+    font-family: BebasNeue;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 10px;
 }
 
-#Player1ScoreHolder {
-    min-width: 68px;
+#Comm1NameHolder {
+    min-width: 800px;
+    max-width: 800px;
 }
-
 #ScoreSeperator {
-    min-width: 210px;
-
+    min-width: 250px;
 }
 
-#Player2ScoreHolder {
-    
-    min-width: 68px;
-    padding-right:5px;
-}
-
-#Player2NameHolder {
-    min-width: 466px;
-    max-width: 466px;
-    
+#Comm2NameHolder {
+    min-width: 800px;
+    max-width: 800px;
 }
 
 
-.PlayerNameText {
+.CommNameText {
     font-family: BebasNeue;
     font-size: 70px;
     letter-spacing: 2px;
@@ -73,7 +64,7 @@
     vertical-align: central;
 }
 
-.PlayerPrefixText {
+.CommPrefixText {
     font-family: BebasNeue;
     font-size: 70px;
     letter-spacing: 2px;
@@ -83,12 +74,22 @@
     text-decoration: none solid rgb(68, 68, 68);
     text-transform: uppercase;
     display: inline;
-    vertical-align:central;
-}
-.PlayerPrefixText--Background {
-    background: linear-gradient(106deg, rgba(255,0,0,1) 0%, rgba(173,68,68,1) 31%, rgba(116,116,116,1) 85%);
+    vertical-align: central;
 }
 
+.CommTwitterText {
+    font-family: BebasNeue;
+    font-size: 50px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color:#FFFFFF;
+    font-weight: 400;
+    font-style:italic;
+    text-decoration: none solid rgb(68, 68, 68);
+    text-transform: uppercase;
+    display: inline;
+    vertical-align: central;
+}
 .ScoreText {
     font-family: BebasNeue;
     font-size: 80px;
@@ -102,16 +103,12 @@
     text-transform: none;
     display: inline;
 }
-.container {
-    display:inline;
-}
-.container p {
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: rgba(0, 0, 0, 0.2);
-}
 
-.CommInfoContainer
-{
-    text-align:center;
+.container {
+    display: inline;
 }
+    .container p {
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: rgba(0, 0, 0, 0.2);
+    }

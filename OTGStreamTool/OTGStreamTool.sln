@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{2B698DDD-2
 		StreamToolHTML\BiB3\MainOverlay\BiB3GameOverlay.css = StreamToolHTML\BiB3\MainOverlay\BiB3GameOverlay.css
 		StreamToolHTML\BiB3\MainOverlay\BiB3GameOverlay.html = StreamToolHTML\BiB3\MainOverlay\BiB3GameOverlay.html
 		StreamToolHTML\BiB3\SecondaryOverlay\BiBAltOverlay.html = StreamToolHTML\BiB3\SecondaryOverlay\BiBAltOverlay.html
+		StreamToolHTML\BiB3\CommentatorsOverlay\BiBComm.css = StreamToolHTML\BiB3\CommentatorsOverlay\BiBComm.css
 		StreamToolHTML\BiB3\CommentatorsOverlay\BiBCommentators.HTML = StreamToolHTML\BiB3\CommentatorsOverlay\BiBCommentators.HTML
 		StreamToolHTML\HTMLPage1.html = StreamToolHTML\HTMLPage1.html
 		StreamToolHTML\Mockup\InGame.css = StreamToolHTML\Mockup\InGame.css

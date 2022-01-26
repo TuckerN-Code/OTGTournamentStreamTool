@@ -21,8 +21,10 @@ namespace OTGStreamToolBackEnd
         public string Player2Score { get; set; }
 
         public string Comm1Name { get; set; }
+        public string Comm1Prefix { get; set; }
         public string Comm1Twitter { get; set; }
         public string Comm2Name { get; set; }
+        public string Comm2Prefix { get; set; }
         public string Comm2Twitter { get; set; }
 
         public string TournamnetName { get; set; }
@@ -49,8 +51,10 @@ namespace OTGStreamToolBackEnd
             list.Add(Player2Score);
             list.Add(Comm1Name);
             list.Add(Comm1Twitter);
+            list.Add(Comm1Prefix);
             list.Add(Comm2Name);
             list.Add(Comm2Twitter);
+            list.Add(Comm2Prefix);
             list.Add(TournamnetName);
             list.Add(TournamnetEvent);
             return list;
