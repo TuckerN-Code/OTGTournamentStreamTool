@@ -32,6 +32,8 @@ namespace OTGStreamToolUserSide.Pages
             Global.updatePackage.Comm2Name = Comm2Name.Text;
             Global.updatePackage.Comm1Twitter = Comm1Twitter.Text;
             Global.updatePackage.Comm2Twitter = Comm2Twitter.Text;
+            Global.updatePackage.Comm1Prefix = Comm1Pre.Text;
+            Global.updatePackage.Comm2Prefix = Comm2Pre.Text;
         }
 
         private void FillFromGlobal()
@@ -40,6 +42,8 @@ namespace OTGStreamToolUserSide.Pages
             Comm1Twitter.Text = Global.updatePackage.Comm1Twitter;
             Comm2Name.Text = Global.updatePackage.Comm2Name;
             Comm2Twitter.Text = Global.updatePackage.Comm2Twitter;
+            Comm1Pre.Text = Global.updatePackage.Comm1Prefix;
+            Comm2Pre.Text = Global.updatePackage.Comm2Prefix;
         }
 
         private void PlayerPageNav_Click(object sender, RoutedEventArgs e)
@@ -50,7 +54,8 @@ namespace OTGStreamToolUserSide.Pages
 
         private void UpdateBotton_Click(object sender, RoutedEventArgs e)
         {
-
+            UpdateGlobalPackage();
+            ApiAccess api = new ApiAccess();
         }
     }
 }

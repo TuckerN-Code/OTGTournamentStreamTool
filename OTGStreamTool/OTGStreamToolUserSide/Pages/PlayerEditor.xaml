@@ -110,8 +110,8 @@
             </Grid.RowDefinitions>
 
             <TextBlock Text="Score" Style="{StaticResource ScoreText}" Grid.ColumnSpan="2"/>
-            <TextBox x:Name="tbx_Player1Score" Grid.Row="1" Grid.Column="0"  Style="{StaticResource ScoreInput}"/>
-            <TextBox x:Name="tbx_Player2Score" Grid.Row="1" Grid.Column="1"  Style="{StaticResource ScoreInput}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+            <TextBox x:Name="tbx_Player1Score" Grid.Row="1" Grid.Column="0"  Style="{StaticResource ScoreInput}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+            <TextBox x:Name="tbx_Player2Score" Grid.Row="1" Grid.Column="1"  Style="{StaticResource ScoreInput}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" TextChanged="tbx_Player2Score_TextChanged" />
             <ComboBox x:Name="cbx_TournamentRound" Grid.Row="2" Grid.ColumnSpan="2"  Style="{StaticResource TournamentRound}" IsReadOnly="True" HorizontalContentAlignment="Center"/>
 
         </Grid>

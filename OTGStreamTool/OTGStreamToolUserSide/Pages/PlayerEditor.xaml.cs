@@ -101,6 +101,9 @@ namespace OTGStreamToolUserSide.Pages
             Global.updatePackage.RoundIndex = cbx_TournamentRound.SelectedIndex;
 
         }
+
+        
+
         private void CheckForGrands()
         {
             if (cbx_TournamentRound.SelectedItem == null)
@@ -180,5 +183,9 @@ namespace OTGStreamToolUserSide.Pages
             tbx_Player2Score.Text = "0";
         }
 
+        private void tbx_Player2Score_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

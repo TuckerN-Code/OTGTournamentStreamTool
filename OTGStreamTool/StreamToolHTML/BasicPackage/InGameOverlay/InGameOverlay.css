@@ -1,0 +1,79 @@
+.body
+{
+    width: 1980px;
+    height: 1080px;
+}
+
+.scoreboard {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Infoboard{
+    margin-right:auto;
+    margin-left:auto;
+    width:800px;
+    display:table;
+    table-layout:fixed;
+}
+#P1NameHolder {
+    text-align: center;
+    background: linear-gradient(45deg, rgba(85,116,124,0.4) 0%, rgba(39,84,113,1) 32%, rgba(0,56,104,1) 100%);
+    width: 400px;
+}
+
+#P2NameHolder {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0,56,104,1) 0%, rgba(39,84,113,1) 68%, rgba(85,116,124,0.4) 100%);
+    width: 400px
+}
+
+.NameBuffer{
+    width:30px;
+    min-width:30px;
+    display:inline;
+}
+
+.ScoreHolder
+{
+    text-align:center;
+    background-color:white;
+    font-family:Britannic;
+    font-size:48px;
+    display:inline;
+}
+
+.ScoreHolder > p{
+    display:inline;
+}
+
+
+.Player1NameText{
+    font-family:Britannic;
+    font-size:36px;
+    color:white;
+    padding-left:30px;
+}
+
+.Player2NameText {
+    font-family: Britannic;
+    font-size: 36px;
+    color: white;
+    padding-right:30px;
+}
+
+.TourInfoText
+{
+    display:table-cell;
+    width:2%;
+    font-family:Britannic;
+    font-size:24px;
+    margin-right:5px;
+    margin-left:5px;
+    color:black;
+    background-color:lightgrey;
+    text-align: center;
+    padding-left:5px;
+    padding-right:5px;
+    white-space:nowrap;
+}
