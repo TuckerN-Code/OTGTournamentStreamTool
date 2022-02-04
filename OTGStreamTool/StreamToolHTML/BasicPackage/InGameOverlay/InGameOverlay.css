@@ -1,3 +1,8 @@
+:root{
+    --player-bg-color: darkblue;
+    --text-color:white;
+}
+
 .body
 {
     width: 1980px;
@@ -47,19 +52,12 @@
     display:inline;
 }
 
-
-.Player1NameText{
-    font-family:Britannic;
-    font-size:36px;
-    color:white;
-    padding-left:30px;
-}
-
-.Player2NameText {
+.PlayerNameText {
     font-family: Britannic;
     font-size: 36px;
     color: white;
-    padding-right:30px;
+    text-anchor:middle;
+    fill:white;
 }
 
 .TourInfoText
