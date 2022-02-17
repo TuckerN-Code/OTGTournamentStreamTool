@@ -27,8 +27,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicPackage", "BasicPackag
 		StreamToolHTML\BasicPackage\InGameOverlay\InGameOverlay.html = StreamToolHTML\BasicPackage\InGameOverlay\InGameOverlay.html
 	EndProjectSection
 EndProject
-Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "CSTApplicationPackage", "CSTApplicationPackage\CSTApplicationPackage.wapproj", "{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,36 +101,6 @@ Global
 		{7B4BD3B6-B12E-47CE-9918-1A048CF5143F}.Release|x64.Build.0 = Release|Any CPU
 		{7B4BD3B6-B12E-47CE-9918-1A048CF5143F}.Release|x86.ActiveCfg = Release|Any CPU
 		{7B4BD3B6-B12E-47CE-9918-1A048CF5143F}.Release|x86.Build.0 = Release|Any CPU
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|ARM.ActiveCfg = Debug|ARM
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|ARM.Build.0 = Debug|ARM
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|ARM.Deploy.0 = Debug|ARM
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|ARM64.ActiveCfg = Debug|ARM64
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|ARM64.Build.0 = Debug|ARM64
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|ARM64.Deploy.0 = Debug|ARM64
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|x64.ActiveCfg = Debug|x64
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|x64.Build.0 = Debug|x64
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|x64.Deploy.0 = Debug|x64
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|x86.ActiveCfg = Debug|x86
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|x86.Build.0 = Debug|x86
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Debug|x86.Deploy.0 = Debug|x86
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|ARM.ActiveCfg = Release|ARM
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|ARM.Build.0 = Release|ARM
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|ARM.Deploy.0 = Release|ARM
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|ARM64.ActiveCfg = Release|ARM64
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|ARM64.Build.0 = Release|ARM64
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|ARM64.Deploy.0 = Release|ARM64
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|x64.ActiveCfg = Release|x64
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|x64.Build.0 = Release|x64
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|x64.Deploy.0 = Release|x64
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|x86.ActiveCfg = Release|x86
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|x86.Build.0 = Release|x86
-		{118875C7-8AE5-43F8-A3EE-BC9076B6FC0C}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

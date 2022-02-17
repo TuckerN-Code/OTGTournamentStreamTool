@@ -1,6 +1,11 @@
-:root{
-    --player-bg-color: darkblue;
-    --text-color:white;
+:root {
+    --player1-bg-color: #003868;
+    --Player2-bg-color: #003868;
+    --Player-text-color: white;
+    --Player-Prefix-Text-Color: grey;
+    --Info-bg-color: lightgrey;
+    --Info-Text-color:black;
+    --Global-Font: Britannic;
 }
 
 .body
@@ -17,9 +22,13 @@
 .Infoboard{
     margin-right:auto;
     margin-left:auto;
-    width:800px;
+    width:300px;
     display:table;
     table-layout:fixed;
+}
+
+.Infoboard > tr > td{
+    max-width:300px;
 }
 #P1NameHolder {
     text-align: center;
@@ -43,7 +52,7 @@
 {
     text-align:center;
     background-color:white;
-    font-family:Britannic;
+    font-family:var(--Global-Font);
     font-size:48px;
     display:inline;
 }
@@ -53,25 +62,45 @@
 }
 
 .PlayerNameText {
-    font-family: Britannic;
+    font-family: var(--Global-Font);
     font-size: 36px;
-    color: white;
-    text-anchor:middle;
-    fill:white;
+    color: var(--Player-text-color);
+    text-anchor: middle;
+    fill: var(--Player-text-color);
 }
 
-.TourInfoText
-{
-    display:table-cell;
-    width:2%;
-    font-family:Britannic;
-    font-size:24px;
-    margin-right:5px;
-    margin-left:5px;
-    color:black;
-    background-color:lightgrey;
+.PlayerPrefixText {
+    font-family: var(--Global-Font);
+    font-size: 36px;
+    color: var(--Player-Prefix-Text-Color);
+    text-anchor: middle;
+    vertical-align: baseline;
+    fill: var(--Player-Prefix-Text-Color);
+}
+
+.TourInfoText {
+    display: table-cell;
+    width: 2%;
+    font-family: var(--Global-Font);
+    font-size: 24px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: var(--Info-Text-color);
+    background-color: var(--Info-bg-color);
     text-align: center;
-    padding-left:5px;
-    padding-right:5px;
-    white-space:nowrap;
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: nowrap;
+}
+
+#P1Poly{
+    fill:var(--player1-bg-color);
+}
+
+#P2Poly{
+    fill:var(--Player2-bg-color);
+}
+
+.PolyText{
+    display:inline;
 }
