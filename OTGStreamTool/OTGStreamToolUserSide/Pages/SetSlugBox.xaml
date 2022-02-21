@@ -11,7 +11,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Paste in part of the Smash.GG link, starting with tournament and ending with the tournament name" TextWrapping="Wrap" TextAlignment="Center"/>
+        <TextBlock Text="Paste in the tournament name as in the smash.gg link" TextWrapping="Wrap" TextAlignment="Center"/>
         <TextBox x:Name="SlugTextBox" Style="{StaticResource SlugAuthInput}"/>
         <Button x:Name="Update" Content="Update" Click="Update_Click" Style="{StaticResource ActionButtons}" Grid.Row="1"/>
     </Grid>

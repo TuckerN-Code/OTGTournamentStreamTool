@@ -12,6 +12,7 @@
 {
     width: 1980px;
     height: 1080px;
+    background:black;
 }
 
 .scoreboard {
@@ -22,13 +23,14 @@
 .Infoboard{
     margin-right:auto;
     margin-left:auto;
-    width:300px;
+    width:800px;
     display:table;
     table-layout:fixed;
 }
 
 .Infoboard > tr > td{
     max-width:300px;
+    padding:0px;
 }
 #P1NameHolder {
     text-align: center;
@@ -55,6 +57,15 @@
     font-family:var(--Global-Font);
     font-size:48px;
     display:inline;
+}
+
+.ScoreText {
+    text-align: center;
+    font-family: var(--Global-Font);
+    font-size: 48px;
+    display: inline;
+    text-align:center;
+    fill:black;
 }
 
 .ScoreHolder > p{

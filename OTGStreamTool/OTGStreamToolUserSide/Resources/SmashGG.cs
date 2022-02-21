@@ -98,7 +98,7 @@ namespace OTGStreamToolUserSide
                 OperationName = "StreamQueueOnTournament",
                 Variables = new
                 {
-                    tourneySlug = tournamentSlug,
+                    tourneySlug = "tournament/" + tournamentSlug,
                 }
 
 
