@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:OTGStreamToolUserSide"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="300"
+        Height="400"
         Width="1200"
         Closing="Window_Closing">
     <Grid x:Name="grid">

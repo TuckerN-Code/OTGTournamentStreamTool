@@ -1,11 +1,12 @@
 :root {
     --player1-bg-color: #003868;
     --Player2-bg-color: #003868;
+    --Comm-bg-color: #003868;
     --Player-text-color: white;
     --Player-Prefix-Text-Color: grey;
     --Info-bg-color: lightgrey;
     --Info-Text-color:black;
-    --Global-Font: Britannic;
+    --Global-Font: Archivo;
 }
 
 .body
@@ -18,6 +19,18 @@
 .scoreboard {
     margin-right: auto;
     margin-left: auto;
+}
+
+.commboard {
+    height:1080px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.commboard table{
+    align-self:flex-end;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .Infoboard{
@@ -56,15 +69,15 @@
     background-color:white;
     font-family:var(--Global-Font);
     font-size:48px;
-    display:inline;
+    display:inline-block;
 }
 
 .ScoreText {
     text-align: center;
     font-family: var(--Global-Font);
     font-size: 48px;
-    display: inline;
-    text-align:center;
+    display: inline-block;
+    text-anchor:middle;
     fill:black;
 }
 
@@ -74,19 +87,21 @@
 
 .PlayerNameText {
     font-family: var(--Global-Font);
-    font-size: 36px;
+    font-size: 58px;
     color: var(--Player-text-color);
     text-anchor: middle;
     fill: var(--Player-text-color);
+    display:block;
 }
 
 .PlayerPrefixText {
     font-family: var(--Global-Font);
-    font-size: 36px;
+    font-size: 48px;
     color: var(--Player-Prefix-Text-Color);
     text-anchor: middle;
     vertical-align: baseline;
     fill: var(--Player-Prefix-Text-Color);
+    display:block;
 }
 
 .TourInfoText {
@@ -104,6 +119,13 @@
     white-space: nowrap;
 }
 
+#P1Tag{
+
+}
+    #P1Tag .letter {
+        display: inline-block;
+    }
+
 #P1Poly{
     fill:var(--player1-bg-color);
 }
@@ -113,5 +135,15 @@
 }
 
 .PolyText{
-    display:inline;
+    display:inline-block;
+}
+
+#C1Path{
+    stroke: var(--Comm-bg-color);
+    stroke-width: 66px;
+}
+
+#C2Path{
+    stroke: var(--Comm-bg-color);
+    stroke-width: 66px
 }

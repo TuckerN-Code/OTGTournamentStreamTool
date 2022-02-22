@@ -23,6 +23,7 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodeWebServer", "NodeWebSer
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicPackage", "BasicPackage", "{7B6A7AF4-E3D6-465E-BA89-D1DED6D0301C}"
 	ProjectSection(SolutionItems) = preProject
+		StreamToolHTML\BasicPackage\InGameOverlay\CommOverlay.html = StreamToolHTML\BasicPackage\InGameOverlay\CommOverlay.html
 		StreamToolHTML\BasicPackage\InGameOverlay\InGameOverlay.css = StreamToolHTML\BasicPackage\InGameOverlay\InGameOverlay.css
 		StreamToolHTML\BasicPackage\InGameOverlay\InGameOverlay.html = StreamToolHTML\BasicPackage\InGameOverlay\InGameOverlay.html
 	EndProjectSection
