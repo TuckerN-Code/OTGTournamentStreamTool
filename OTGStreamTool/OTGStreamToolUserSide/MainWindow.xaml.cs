@@ -19,7 +19,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using OTGStreamToolUserSide;
-
+using AutoUpdaterDotNET;
 
 namespace OTGStreamToolUserSide
 {
@@ -33,6 +33,7 @@ namespace OTGStreamToolUserSide
         public MainWindow()
         {
             InitializeComponent();
+            AutoUpdater.Start("https://github.com/TuckerN-Code/CelsusStreamTool/blob/main/update.xml");
             Global.updatePackage.Player1Score = "0";
             Global.updatePackage.TournamentRound = "Tournament Round";
             Global.updatePackage.Player2Score = "0";

@@ -6,7 +6,7 @@
     --Player-Prefix-Text-Color: grey;
     --Info-bg-color: lightgrey;
     --Info-Text-color:black;
-    --Global-Font: sans-serif;
+    --Global-Font: Archivo;
 }
 
 .body
@@ -39,6 +39,7 @@
     width:800px;
     display:table;
     table-layout:fixed;
+
 }
 
 .Infoboard > tr > td{
@@ -119,7 +120,6 @@
     white-space: nowrap;
 }
 
-
 #P1Tag{
 
 }
@@ -142,11 +142,9 @@
 #C1Path{
     stroke: var(--Comm-bg-color);
     stroke-width: 66px;
-fill-opacity: 0;
 }
 
 #C2Path{
     stroke: var(--Comm-bg-color);
-    stroke-width: 66px;
-fill-opacity: 0;
+    stroke-width: 66px
 }
